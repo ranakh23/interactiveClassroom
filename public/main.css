@@ -1,0 +1,306 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    margin-left: 0;
+}
+
+.ba3ed-aktar{
+    display: none;
+}
+.ba3ed{
+    
+    display: flex;
+    flex-direction: row; 
+    
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+
+    /* display: none; */
+}
+
+.main{
+    
+    flex:5;
+}
+
+.contain{
+    display:flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+#video-room{
+
+  background-color: #232636;
+
+  display:table;
+  flex:1;
+  margin:0 auto;
+  width: 100%;
+  height:auto;
+}
+
+#white-board{
+    flex:5;
+    width: 100%;
+    height: 100%;
+}
+
+.aside{
+    background-color: rgb(229, 229, 233);
+    width: 100%;
+    height: 100%;
+    flex:1
+}
+
+video {
+    /* transform: rotateY(180deg); */
+    display:block;
+    height: 90px !important;
+}
+
+
+#peerVideo:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.mdl-layout__container{
+    position: relative;
+}
+
+.whiteboard {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+}
+
+.colors {
+    position: absolute;
+    top: 180px;
+    z-index:2;
+}
+  
+.color {
+    display: inline-block;
+    height: 48px;
+    width: 48px;
+}
+  
+  .color.black { background-color: black; }
+  .color.red { background-color: red; }
+  .color.green { background-color: green; }
+  .color.blue { background-color: blue; }
+  .color.yellow { background-color: yellow; }
+
+  .row {
+    display: flex;
+    position: relative;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .column {
+    /* flex: 50%; */
+    padding: 5px;
+  }
+
+  
+  /* Input */
+  
+.inputMessage {
+    border: 3px solid #afafaf;
+    background-color: rgb(219, 219, 224) ;
+    bottom: 0;
+    height: 60px;
+    left: 0;
+    outline: none;
+    padding-left: 10px;
+    position: absolute;
+    right: 0;
+    width: 100%;
+}
+
+  /* Pages */
+
+.pages {
+    /* height: 100%; */
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    bottom:50px;
+    position: relative;
+  }
+  
+  .page {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+  }
+/* Chat page */
+
+.chat.page {
+    top:48px;
+    height: 605px;
+    position: absolute;
+    /* display: none; */
+  }
+  
+  /* Font */
+  
+  .messages {
+    font-size: 150%;
+  }
+  
+  .inputMessage {
+    font-size: 100%;
+  }
+  
+  .log {
+    color: gray;
+    font-size: 70%;
+    margin: 5px;
+    text-align: center;
+  }
+  
+  /* Messages */
+  
+  .chatArea {
+    position: relative;
+    height: 100%;
+    padding-bottom: 60px;
+  }
+  
+  .messages {
+    height: 100%;
+    margin: 0;
+    overflow-y: scroll;
+    padding: 10px 20px 10px 20px;
+  }
+  
+  .message.typing .messageBody {
+    color: gray;
+  }
+  
+  .username {
+    font-weight: 700;
+    overflow: hidden;
+    padding-right: 15px;
+    text-align: right;
+  }  
+
+  ul {
+    list-style: none;
+    word-wrap: break-word;
+  }
+
+ div.aside div.mdl-tabs.mdl-js-tabs.mdl-js-ripple-effect.mdl-js-ripple-effect--ignore-events.is-upgraded{
+    position: relative;
+  }
+
+  /* Login Page */
+
+.login.page {
+    background-color: #000;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .login.page .form {
+    height: 100px;
+    margin-top: -100px;
+    position: absolute;
+  
+    text-align: center;
+    top: 50%;
+    width: 100%;
+  }
+  
+  .login.page .form .usernameInput {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #fff;
+    outline: none;
+    padding-bottom: 15px;
+    text-align: center;
+    width: 400px;
+  }
+  
+  .login.page .title {
+    font-size: 200%;
+  }
+  
+  .login.page .usernameInput {
+    font-size: 200%;
+    letter-spacing: 3px;
+  }
+  
+  .login.page .title, .login.page .usernameInput {
+    color: #fff;
+    font-weight: 100;
+  }
+
+  .mdl-button--fab.mdl-button--colored{
+    position: absolute;
+    right:10px;
+    top:10px;
+  }
+  
+
+  .button {
+    background-color:rgb(255, 255, 255);
+    color: white;
+    text-decoration: none;
+    border-radius: 60px;
+    height: 32px;
+    display: inline-flex;
+    align-items: center;
+    overflow:hidden;
+    width: auto;
+    max-width: 32px; /** I'm animating max-width because width needs to be auto, and auto can't be animated **/
+    -webkit-transition: max-width 0.5s;
+    transition: max-width 0.5s;
+    left: 10px;
+    position: absolute;
+    top:10px;
+  }
+  
+  .button:hover {
+    max-width: 300px;
+  }
+  
+  .icon {
+    font-family: "Font Awesome 5 Free";
+    font-size: 16px;
+    margin-right: 15px;
+    padding: 0px 8px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .text {
+    white-space: nowrap;
+    padding-right: 15px;
+  }
+
+.colorsz {
+    position: absolute;
+    top:52px;
+    left: 10px;
+}
+
+.mdl-tabs__tab{
+  width: 100%;
+}
