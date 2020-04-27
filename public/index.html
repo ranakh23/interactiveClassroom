@@ -1,0 +1,158 @@
+<html>
+
+<head>
+    <title>Video Chat App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="main.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="abel" class="abel pages page">
+        <ul class="pages" height=100%>
+            <li class="login page">
+              <div class="form">
+                <h3 class="title">What's your name?</h3>
+                <input class="usernameInput" type="text" maxlength="14" />
+              </div>
+            </li>
+        </ul>
+    </div>
+    <div class="ba3ed-aktar">
+        <div class="ba3ed">
+            <div class="main"> 
+                <div class="contain">
+        
+                    <div id="video-room">
+                        <div class="row">
+                            <div class="column">
+                                <video class="embed-responsive-item" muted playsinline></video>
+                            </div>
+                                    
+                            <div id="peerDiv" class="column">
+                            </div>  
+                        </div>
+                         
+                    </div> 
+                    
+                    <!-- Simple header with fixed tabs. -->
+        
+                    <div id="white-board">
+                        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs">
+                            <header class="mdl-layout__header">
+                                <!-- Tabs -->
+                                <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+                                <a href="#fixed-tab-1" class="mdl-layout__tab is-active">Board 1</a>
+                                <a href="#fixed-tab-2" class="mdl-layout__tab">Board 2</a>
+                                <a href="#fixed-tab-3" class="mdl-layout__tab">Private Board</a>
+                                <a href="#fixed-tab-4" class="mdl-layout__tab">Slides</a>
+                                </div>
+                            </header>
+                    
+                            <main class="mdl-layout__content">
+                                <section class="mdl-layout__tab-panel is-active" id="fixed-tab-1">
+                                <div class="page-content"><!-- Your content goes here -->
+                                    <canvas class="whiteboard" width=100% height=100%></canvas>
+                                </div>
+                                </section>
+                                <section class="mdl-layout__tab-panel" id="fixed-tab-2">
+                                <div class="page-content"><!-- Your content goes here -->
+                                    <canvas class="whiteboard" width=100% height=100%></canvas>
+                                </div>
+                                </section>
+                                <section class="mdl-layout__tab-panel" id="fixed-tab-3">
+                                    <div class="page-content"><!-- Your content goes here -->
+                                        <canvas class="whiteboard" width=100% height=100%></canvas>
+                                        <!-- Colored mini FAB button -->
+                                        <button id="demo-menu-lower-right" class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored">
+                                        <i class="material-icons">add</i>
+                                        </button>
+
+                                        <!-- Multiline Tooltip -->
+                                        <div class="mdl-tooltip" for="demo-menu-lower-right">
+                                        Share your board<br>with other participants
+                                        </div>
+
+                                        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+                                            for="demo-menu-lower-right">
+                                        
+                                        </ul>
+
+                                    </div>
+                                </section>
+                                </section>
+                                <section class="mdl-layout__tab-panel" id="fixed-tab-4">
+                                    <div class="page-content"><!-- Your content goes here -->
+                                        
+                                    </div>
+                                </section>
+                            </main>
+                        </div>
+                        
+                        
+                        <div class="colors">
+                            <a href="#" class="button">
+                                <span class="icon">
+                                    <img src="https://images.vexels.com/media/users/3/140956/isolated/preview/d5f8a31ec34cc680c69ec9c4b4ea89fc-pencil-icon-by-vexels.png" width="32px">
+                                </span>
+                                <span class="text">
+                                    <div class="color black"></div>
+                                    <div class="color red"></div>
+                                    <div class="color green"></div>
+                                    <div class="color blue"></div>
+                                    <div class="color yellow"></div>
+                                </span>
+                            </a>
+                            
+                            <!-- <div class="colorsz">
+                                <img id="text-icon" src="https://img.icons8.com/ios/500/text.png" width="32px">
+                            </div> -->
+                            
+                        </div>
+                    </div>
+                </div>       
+            </div>
+        
+            <div class="aside">
+                <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+                    <div class="mdl-tabs__tab-bar">
+                        <a href="#starks-panel" class="mdl-tabs__tab is-active">Chat</a>
+                        <a href="#lannisters-panel" class="mdl-tabs__tab">Quiz</a>
+                    </div>
+                  
+                    <div class="mdl-tabs__panel is-active" id="starks-panel">
+                        <ul class="pages">
+                            <li class="chat page">
+                              <div class="chatArea">
+                                <ul class="messages"></ul>
+                              </div>
+                              <input class="inputMessage" placeholder="Type here..."/>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mdl-tabs__panel" id="lannisters-panel">
+                      <ul>
+                        <li>Tywin</li>
+                        <li>Cersei</li>
+                        <li>Jamie</li>
+                        <li>Tyrion</li>
+                      </ul>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+    
+    
+
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="bundle.js"></script>
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+</body>
+
+</html>
